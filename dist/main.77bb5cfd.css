@@ -1,0 +1,38 @@
+.sub-nav {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.sub-nav > ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  color: #242424;
+}
+.sub-nav > ul > li {
+  margin-right: 20px;
+}
+.sub-nav > ul li:hover {
+  background-color: seashell;
+}
+
+body {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/*# sourceMappingURL=/main.77bb5cfd.css.map */

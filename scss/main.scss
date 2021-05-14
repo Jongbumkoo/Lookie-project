@@ -1,0 +1,22 @@
+@import "./FirstMainPage.scss";
+
+$Color:#333;
+
+body{
+    color:$Color;
+    font-size:16px;
+    font-weight:400;
+    line-height:1.4;
+    font-family:'Nanum Gothic', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.inner{ 
+    max-width:1080px;
+    margin:0 auto;
+    position:relative;
+    
+}
