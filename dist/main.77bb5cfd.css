@@ -8,21 +8,95 @@
   list-style: none;
   display: flex;
   margin: 0;
-  color: #242424;
 }
 .sub-nav > ul > li {
   margin-right: 20px;
+  color: #bb2020;
 }
-.sub-nav > ul li:hover {
-  background-color: seashell;
+.sub-nav > ul > li > a {
+  text-decoration: none;
+  color: #535353;
+}
+.sub-nav > ul > li > a:hover {
+  color: #070707;
+}
+.sub-nav > ul li:after {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #7e7e7e;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0px auto 10px;
+}
+.sub-nav > ul li:last-child:after {
+  display: none;
+}
+
+.main-nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.main-nav > ul {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+  color: black;
+}
+.main-nav > ul > li {
+  margin-right: 25px;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.2s;
+}
+.main-nav > ul li:hover {
+  background-color: rgba(255, 238, 161, 0.438);
+  border-radius: 15px 15px 0 0;
+}
+
+.mian-image {
+  width: 640px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 50px auto 0 auto;
+}
+.mian-image .main-description {
+  font-size: 50px;
+  text-align: center;
+  font-weight: 700;
+}
+.mian-image .main-description > p {
+  margin-bottom: 0;
+}
+.mian-image .signup-box {
+  width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.mian-image .signup-box > input {
+  outline: none;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+.mian-image .signup-box > button {
+  margin-left: 10px;
+}
+
+img {
+  display: block;
 }
 
 body {
-  color: #333;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 450;
   line-height: 1.4;
   font-family: "Nanum Gothic", sans-serif;
+  margin: 0;
+  position: relative;
 }
 
 a {
@@ -30,9 +104,18 @@ a {
 }
 
 .inner {
-  max-width: 1080px;
-  margin: 0 auto;
   position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 120px;
+  border-bottom: solid 0.5px black;
+}
+
+.logo {
+  height: 75px;
+  position: absolute;
+  top: 13px;
+  left: 0;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
