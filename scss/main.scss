@@ -1,6 +1,6 @@
 @import "./FirstMainPage.scss";
 
-
+$maincolor:#5b5759;
 
 
 
@@ -33,9 +33,22 @@ a{
     position:relative;
     max-width: 1300px;
     margin: 0 auto;
-   height: 120px; 
-   border-bottom:solid 0.5px black;
+    border-bottom:solid 0.5px $maincolor;
+   display: flex;
+   justify-content: flex-end;
+
+  
+   
 }
+
+
+// .hidden-menu{
+//     >.inner{
+//         background-color: rgb(255, 238, 161);
+//         border-bottom: hidden;
+//         position:relative;
+//     }
+// }
 
 
 .logo {
