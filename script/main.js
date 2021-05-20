@@ -2,6 +2,7 @@
 import '../scss/main.scss'
 import VanillaTilt from 'vanilla-tilt';
 import throttle from 'lodash.throttle';
+import gsap from 'gsap';
 
 
 // sub-menu UX// 
@@ -48,6 +49,50 @@ cliked.addEventListener("mouseenter",function(){
 })
 cliked.addEventListener("mouseleave",function(){
     CreatPadding.classList.remove("padding")
+});
+
+
+// scroll to -연습 // 
+
+const handler = document.querySelector('#cotact-button')
+
+handler.addEventListener('click',()=>{
+    const scrollTo = document.querySelector('.sign-up')
+    scrollTo.scrollIntoView({behavior:'smooth'})
 })
+
+
+const handler2 = document.querySelector('.sign-up')
+handler2.addEventListener('click',()=>{
+    const scrollTo2 = document.querySelector('#cotact-button');
+    scrollTo2.scrollIntoView({behavior:'smooth'})
+});
+
+
+//fade-in //
+
+const fadeOutImage = document.querySelector('#fade-out');
+const imageHeight = fadeOutImage.getBoundingClientRect().height;
+
+document.addEventListener('scroll',()=>{
+    fadeOutImage.style.opacity= 1 - window.scrollY / imageHeight;  // 0  = 1 - 77 / 77    1 = 1 -77 / 77 
+})
+
+
+
+
+
+// const fadeOutImage = document.querySelector('#fade-out');
+// window.addEventListener('scroll', function(){
+//     console.log(window.scrolly)
+//     if(window.scrollY > 500){
+//         gsap.to(fadeOutImage, .6,{
+//             opacity:0,
+//             display:none
+//         })
+//     }else{
+
+//     }
+// });
 
 
