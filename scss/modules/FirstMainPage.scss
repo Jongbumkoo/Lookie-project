@@ -304,11 +304,32 @@ header{
 
 
 
-#cotact-button{
-    position:absolute;
-        width:100px;
-    height:100px;
-    background-color: black;
-    bottom:0;
+#to-top-button{
+    position:fixed;
+    right:10px;
+    width:50px;    
+    height:60px;
+    background-color: white;
+    border-radius: 50px;
+    border:solid  .5px rgba(202, 202, 202, 0.575);
+    box-shadow: 1px 1px 10px 2px rgb(206, 206, 206);
+    transition:opacity .5s ;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    >img{
+        display:block;
+     }
+   
+}
 
+#to-top-button.appear-button{
+    pointer-events: auto ;
+    opacity: 1;
+    >img{
+        display:block;
+     }
 }

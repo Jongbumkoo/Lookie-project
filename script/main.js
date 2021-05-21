@@ -1,4 +1,4 @@
-'use strict'
+
 import '../scss/main.scss'
 import VanillaTilt from 'vanilla-tilt';
 import throttle from 'lodash.throttle';
@@ -54,19 +54,36 @@ cliked.addEventListener("mouseleave",function(){
 
 // scroll to -연습 // 
 
-const handler = document.querySelector('#cotact-button')
+// const toTop =document.querySelector('#to-top-button');
 
-handler.addEventListener('click',()=>{
-    const scrollTo = document.querySelector('.sign-up')
-    scrollTo.scrollIntoView({behavior:'smooth'})
+// toTop.addEventListener('click',function(){
+//     const scrollTo = document.querySelector('.sub-nav')
+//     scrollTo.scrollIntoView({behavior:'smooth'})
+// });
+
+const toTopButton = document.querySelector('#to-top-button');
+
+
+toTopButton.addEventListener('click',()=>{
+   scroll('.header')
+})
+
+function scroll (selector) {
+    const yes = document.querySelector(selector)
+    yes.scrollIntoView({behavior:'smooth'})
+}; 
+
+
+window.addEventListener('scroll',function(){
+  if(window.scrollY > navBarHeight /2 ){
+    toTopButton.classList.add('appear-button')
+    
+  }else{
+      toTopButton.classList.remove('appear-button')
+  }
 })
 
 
-const handler2 = document.querySelector('.sign-up')
-handler2.addEventListener('click',()=>{
-    const scrollTo2 = document.querySelector('#cotact-button');
-    scrollTo2.scrollIntoView({behavior:'smooth'})
-});
 
 
 //fade-in //
@@ -79,20 +96,5 @@ document.addEventListener('scroll',()=>{
 })
 
 
-
-
-
-// const fadeOutImage = document.querySelector('#fade-out');
-// window.addEventListener('scroll', function(){
-//     console.log(window.scrolly)
-//     if(window.scrollY > 500){
-//         gsap.to(fadeOutImage, .6,{
-//             opacity:0,
-//             display:none
-//         })
-//     }else{
-
-//     }
-// });
 
 
