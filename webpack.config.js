@@ -9,8 +9,8 @@ module.exports ={
     entry:'./script/main.js',
     //결과물 ( 번들을) 반환하는 설정 
     output:{
-        // path: path.resolve(__dirname,'dist'),
-        // filename:"main.js",
+        path: path.resolve(__dirname,'dist'),
+        filename:"main.js",
         clean: true
     },
 
@@ -45,3 +45,4 @@ module.exports ={
         host :'localhost'
     }
 }
+
